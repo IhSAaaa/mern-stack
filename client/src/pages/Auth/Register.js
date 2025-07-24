@@ -14,8 +14,7 @@ import {
   FiEyeOff, 
   FiCheck,
   FiGithub, 
-  FiTwitter, 
-  FiGoogle 
+  FiTwitter
 } from 'react-icons/fi';
 
 const Register = () => {
@@ -339,7 +338,7 @@ const Register = () => {
                 onClick={() => handleSocialRegister('google')}
                 className="flex items-center justify-center"
               >
-                <FiGoogle className="w-4 h-4" />
+                <FiMail className="w-4 h-4" />
               </Button>
               <Button
                 variant="outline"

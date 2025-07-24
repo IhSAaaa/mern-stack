@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, createContext, useContext } from 'react';
 import { createPortal } from 'react-dom';
 import { clsx } from 'clsx';
 import { FiX, FiCheck, FiAlertTriangle, FiInfo, FiAlertCircle } from 'react-icons/fi';
@@ -241,8 +241,6 @@ export const ToastProvider = ({ children, position = 'top-right' }) => {
 };
 
 // Toast Context
-import { createContext, useContext } from 'react';
-
 const ToastContext = createContext();
 
 export const useToastContext = () => {

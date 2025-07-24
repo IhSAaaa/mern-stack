@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
-import { FiPlus, FiSearch, FiFilter, FiGrid, FiList } from 'react-icons/fi';
+import { FiPlus, FiSearch, FiFilter, FiGrid, FiList, FiAlertTriangle } from 'react-icons/fi';
 
 // Components
 import PostCard from '../components/Posts/PostCard';
@@ -11,10 +11,10 @@ import Skeleton from '../components/UI/Skeleton';
 import Button from '../components/UI/Button';
 import Input from '../components/UI/Input';
 import { useToastContext } from '../components/UI/Toast';
-import { useApi } from '../hooks/useApi';
+import useApi from '../hooks/useApi';
 
 // Hooks
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 
 const Home = () => {
   const { user } = useAuth();

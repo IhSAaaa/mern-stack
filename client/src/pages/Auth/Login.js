@@ -5,7 +5,7 @@ import { useAuth } from '../../context/AuthContext';
 import Button from '../../components/UI/Button';
 import Input from '../../components/UI/Input';
 import Card from '../../components/UI/Card';
-import { FiMail, FiLock, FiEye, FiEyeOff, FiGithub, FiTwitter, FiGoogle } from 'react-icons/fi';
+import { FiMail, FiLock, FiEye, FiEyeOff, FiGithub, FiTwitter } from 'react-icons/fi';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -190,7 +190,7 @@ const Login = () => {
                 onClick={() => handleSocialLogin('google')}
                 className="flex items-center justify-center"
               >
-                <FiGoogle className="w-4 h-4" />
+                <FiMail className="w-4 h-4" />
               </Button>
               <Button
                 variant="outline"

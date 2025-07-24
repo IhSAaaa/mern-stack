@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 
 // Context Providers
-import { AuthProvider } from './contexts/AuthContext';
-import { ThemeProvider } from './contexts/ThemeContext';
+import { AuthProvider } from './context/AuthContext';
+import { ThemeProvider } from './context/ThemeContext';
 import { ToastProvider } from './components/UI/Toast';
 
 // Error Boundary
@@ -18,10 +18,10 @@ import Layout from './components/Layout/Layout';
 // Pages
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import CreatePost from './pages/CreatePost';
-import Profile from './pages/Profile';
-import PostDetail from './pages/PostDetail';
+import Register from './pages/Auth/Register';
+import CreatePost from './pages/Posts/CreatePost';
+import Profile from './pages/Profile/Profile';
+import PostDetail from './pages/Posts/PostDetail';
 import NotFound from './pages/NotFound';
 
 // Create a client
@@ -50,19 +50,17 @@ function App() {
           <ThemeProvider>
             <AuthProvider>
               <ToastProvider position="top-right">
-                <Router>
-                  <Layout>
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      <Route path="/login" element={<Login />} />
-                      <Route path="/register" element={<Register />} />
-                      <Route path="/create-post" element={<CreatePost />} />
-                      <Route path="/profile" element={<Profile />} />
-                      <Route path="/post/:id" element={<PostDetail />} />
-                      <Route path="*" element={<NotFound />} />
-                    </Routes>
-                  </Layout>
-                </Router>
+                <Layout>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route path="/create-post" element={<CreatePost />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route path="/post/:id" element={<PostDetail />} />
+                    <Route path="*" element={<NotFound />} />
+                  </Routes>
+                </Layout>
               </ToastProvider>
             </AuthProvider>
           </ThemeProvider>

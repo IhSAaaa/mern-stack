@@ -14,7 +14,7 @@ import Card from '../components/UI/Card';
 import { useToastContext } from '../components/UI/Toast';
 
 // Hooks
-import { useAuth } from '../contexts/AuthContext';
+import { useAuth } from '../context/AuthContext';
 
 // Validation schema
 const loginSchema = yup.object({
