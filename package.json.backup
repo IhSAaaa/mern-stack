@@ -1,0 +1,46 @@
+{
+  "name": "blog-platform-mern",
+  "version": "1.0.0",
+  "description": "A modern blog platform built with MERN Stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "docker:dev": "./docker-scripts/dev.sh start",
+    "docker:dev:stop": "./docker-scripts/dev.sh stop",
+    "docker:dev:restart": "./docker-scripts/dev.sh restart",
+    "docker:dev:logs": "./docker-scripts/dev.sh logs",
+    "docker:prod": "./docker-scripts/prod.sh deploy",
+    "docker:prod:stop": "./docker-scripts/prod.sh stop",
+    "docker:prod:restart": "./docker-scripts/prod.sh restart",
+    "docker:prod:logs": "./docker-scripts/prod.sh logs",
+    "docker:prod:backup": "./docker-scripts/prod.sh backup",
+    "docker:prod:monitor": "./docker-scripts/prod.sh monitor"
+  },
+  "keywords": ["mern", "blog", "react", "nodejs", "mongodb", "express"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "express-validator": "^7.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "multer": "^1.4.5-lts.1",
+    "multer-storage-cloudinary": "^4.0.0",
+    "cloudinary": "^1.40.0",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  }
+} 
