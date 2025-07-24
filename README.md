@@ -357,10 +357,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Framer Motion](https://www.framer.com/motion/) for animations
 - [React Query](https://tanstack.com/query) for server state management
 
-## 📞 **Support**
-
-For support, email support@blogplatform.com or join our Slack channel.
-
 ---
 
 **Built with ❤️ for the developer community** 

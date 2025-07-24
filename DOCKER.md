@@ -453,13 +453,6 @@ docker-compose -f docker-compose.dev.yml logs > logs.txt
 - ✅ Regular backups
 - ✅ Proper logging
 
-## 🤝 **Support**
-
-For issues and questions:
-- 📧 Email: support@blogplatform.com
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/mern-blog-platform/issues)
-- 📖 Documentation: [Project Wiki](https://github.com/yourusername/mern-blog-platform/wiki)
-
 ---
 
 **Happy Dockerizing! 🐳** 

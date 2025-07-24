@@ -376,13 +376,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## 📞 **Support**
-
-For issues and questions:
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/mern-blog-platform/issues)
-- **Documentation**: Check README.md and docs/ folder
-- **Community**: Join our Discord/Slack channel
-
----
-
 **Maintained with ❤️ by the development team** 
